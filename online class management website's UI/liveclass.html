@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="liveclass.css">
+    <title>OCM Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList active">
+                    <a href="dashboard.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="links">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="student.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                                    <span class="links">Student/Teacher</span>
+                                                    </a>
+                </li>
+                <li class="navList">
+                    <a href="class.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Class</span>
+                    </a>
+                </li>
+            
+                <li class="navList">
+                    <a href="Assignment.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Assignment Submission</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="liveclass.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Live Class</span>
+                    </a>
+                </li>
+                
+            </ul>
+            <ul class="bottom-link">
+                <li class="navList">
+                    <a href="index.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span class="links">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Live Classes</h1>
+        <button id="joinClassBtn">Join Class</button>
+        <button id="startClassBtn">Start Class</button>
+
+        <div class="video-container">
+            <h2>Video Conference</h2>
+            <iframe id="videoFrame" src="" width="640" height="480" frameborder="0"></iframe> 
+        </div>
+
+        <div class="chatbox">
+            <h2>Chatbox</h2>
+            <div id="chatMessages"></div>
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendMessageBtn">Send</button>
+        </div>
+
+        <div class="attendance-list">
+            <h2>Attendance</h2>
+            <ul id="attendanceList"></ul>
+        </div>
+
+        <button class="raise-hand" id="raiseHandBtn">Raise Hand</button>
+    </div>
+
+    <script>
+        // **Note:** Replace with actual API keys and integration logic
+        const zoomApiKey = "YOUR_ZOOM_API_KEY"; 
+        const googleMeetApiKey = "YOUR_GOOGLE_MEET_API_KEY"; 
+
+        const joinClassBtn = document.getElementById("joinClassBtn");
+        const startClassBtn = document.getElementById("startClassBtn");
+        const videoFrame = document.getElementById("videoFrame");
+        const chatMessages = document.getElementById("chatMessages");
+        const chatInput = document.getElementById("chatInput");
+        const sendMessageBtn = document.getElementById("sendMessageBtn");
+        const attendanceList = document.getElementById("attendanceList");
+        const raiseHandBtn = document.getElementById("raiseHandBtn");
+
+        // **Video Conferencing Integration (Example - Zoom)**
+        joinClassBtn.addEventListener("click", () => {
+            // **Replace with actual Zoom API integration**
+            const zoomMeetingId = "YOUR_ZOOM_MEETING_ID"; 
+            videoFrame.src = `https://zoom.us/j/${zoomMeetingId}?pwd=YOUR_ZOOM_PASSWORD`; 
+        });
+
+        // **Chat Functionality (Example - Basic JavaScript)**
+        sendMessageBtn.addEventListener("click", () => {
+            const message = chatInput.value;
+            if (message) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("chat-message");
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = "";
+            }
+        });
+
+        // **Attendance Tracking (Example - Basic Array)**
+        const attendance = [];
+        // Logic to add/remove students from attendance list (e.g., based on joining/leaving)
+
+        // **Raise Hand Feature**
+        raiseHandBtn.addEventListener("click", () => {
+            // Implement logic to notify teacher/instructor
+            alert("Hand raised!"); 
+        });
+
+        // **Start Class Button (Example - Placeholder)**
+        startClassBtn.addEventListener("click", () => {
+            alert("Class started!"); 
+            // Implement logic to start the class (e.g., initiate recording, send notifications)
+        });
+    </script>
+    <!-- Sources for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+</body>
+</html>

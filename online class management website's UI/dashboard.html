@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="dashboard.css">
+    <title>OCM Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList active">
+                    <a href="dashboard.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="links">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="student.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                                    <span class="links">Student/Teacher</span>
+                                                    </a>
+                </li>
+                <li class="navList">
+                    <a href="class.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Class</span>
+                    </a>
+                </li>
+            
+                <li class="navList">
+                    <a href="Assignment.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Assignment Submission</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="liveclass.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Live Class</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li class="navList">
+                    <a href="index.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span class="links">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="Preview-removebg-preview.png" alt=" Logo"> 
+                </div>
+            </header>
+
+            <h2>Dashboard</h2>
+
+            <div class="teacher-dashboard">
+                <h3>Teacher Dashboard</h3>
+                <div class="overview">
+                    <h4>Overview</h4>
+                    <div class="card">
+                        <h5>Upcoming Classes</h5>
+                        <ul>
+                            <li>Class 1:Socology - 22-12-2024 09:00AM</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h5>Ongoing Classes</h5>
+                        <ul>
+                            <li>Class 2: Chemistry - 22-12-2024 09:30AM</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h5>Completed Classes</h5>
+                        <ul>
+                            <li>Class 3: Electrical  - 22-12-2024 11:00AM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <div class="card">
+                        <a href="#">Create New Class</a>
+                    </div>
+                    <div class="card">
+                        <a href="#">View Assignments</a>
+                    </div>
+                    <div class="card">
+                        <a href="#">Check Attendance</a>
+                    </div>
+                </div>
+
+                <div class="notifications">
+                    <h4>Notifications</h4>
+                    <div class="card">
+                        <ul>
+                            <li>Assignment submitted by Priya in Class 1.</li>
+                            <li>New query from sashank in Class 2.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="widgets">
+                    <h4>Widgets</h4>
+                    <div class="widget">
+                        <h5>Class Progress & Engagement</h5>
+                        <div id="charts"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="student-dashboard">
+                <h3>Student Dashboard</h3>
+                <div class="overview">
+                    <h4>Upcoming Classes & Deadlines</h4>
+
+                    <div class="student-dashboard">
+                        <h3>Student Dashboard</h3>
+                        <div class="overview">
+                            <h4>Upcoming Classes & Deadlines</h4>
+                            <div class="card">
+                                <ul>
+                                    <li>Class 1: 22-12-2024 at 9:00AM</li>
+                                    <li>Class 2: 22-12-2024 at 9:30AM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="enrolled-courses">
+                            <h4>Enrolled Courses</h4>
+                            <div class="card">
+                                <ul>
+                                    <li>Course 1: <progress value="50" max="100"></progress> 50%</li>
+                                    <li>Course 2: <progress value="75" max="100"></progress> 75%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="announcements">
+                            <h4>Announcements & Messages</h4>
+                            <div class="card">
+                                <ul>
+                                    <li>Message from Teacher 1</li>
+                                    <li>Message from Teacher 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="widgets">
+                            <div class="widget">
+                                <h5>Notifications</h5>
+                                <div class="card">
+                                    <ul>
+                                        <li>Assignment deadlines</li>
+                                        <li>New class invitations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </section>
+                    
+                    <script src="script.js"></script>
+                    
+                    <!-- Sources for icons -->
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    
+                    </body>
+                    </html>

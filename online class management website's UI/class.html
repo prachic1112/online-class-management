@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="class.css">
+    <title>OCM Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList active">
+                    <a href="dashboard.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="links">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="student.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                                    <span class="links">Student/Teacher</span>
+                                                    </a>
+                </li>
+                <li class="navList">
+                    <a href="class.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Class</span>
+                    </a>
+                </li>
+            
+                <li class="navList">
+                    <a href="Assignment.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Assignment Submission</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="liveclass.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Live Class</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li class="navList">
+                    <a href="index.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span class="links">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="dashboard">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="Preview-removebg-preview.png" alt="AKTU Logo"> 
+                </div>
+            </header>
+
+            <main>
+                <section class="class-banner">
+                    <h1>Class Name: Physics</h1>
+                    <p>Teacher: Prachi Chaturvedi</p>
+                    <p>Schedule: Monday, Wednesday, Friday - 10:00 AM - 11:00 AM</p>
+                </section>
+    
+                <section class="class-content">
+                    <div class="tabs">
+                        <button class="tab-link active" onclick="openTab(event, 'course-content')">Course Content</button>
+                        <button class="tab-link" onclick="openTab(event, 'assignments')">Assignments</button>
+                        <button class="tab-link" onclick="openTab(event, 'discussion-forum')">Discussion Forum</button>
+                        <button class="tab-link" onclick="openTab(event, 'attendance')">Attendance</button>
+                    </div>
+    
+                    <div id="course-content" class="tab-pane active">
+                        <h2>Course Content</h2>
+                        <ul>
+                            <li><a href="#">Video Lecture 1</a></li>
+                            <li><a href="#">PDF Notes 1</a></li>
+                            <li><a href="#">PPT Presentation 1</a></li>
+                            <li><a href="#">Practice Samples</a></li>
+                            <li><a href="#">Queries</a></li>
+                        </ul>
+                    </div>
+    
+                    <div id="assignments" class="tab-pane">
+                        <h2>Assignments</h2>
+                        <ul>
+                            <li><a href="#">Assignment 1</a> - Deadline: 2024-12-25</li>
+                            <li><a href="#">Assignment 2</a> - Deadline: 2024-12-30</li>
+                        </ul>
+                    </div>
+    
+                    <div id="discussion-forum" class="tab-pane">
+                        <h2>Discussion Forum</h2>
+                        <div class="discussion-thread">
+                            <h3>Thread 1</h3>
+                            <p>Posted by Prachi Chaturvedi on 2024-12-20</p>
+                           <table>
+                            <thead>
+                                <tr>
+                            <p>Comment 1</p>
+                            <p>Comment 2</p>
+                            <p>Comment 3</p>
+                            <p>Comment 4</p>
+                            <p>Comment 5</p>
+                            <p>Comment 6</p>
+                            <p>Comment 7</p>
+                            <p>Comment 8</p>
+                            </tr>
+                            </thead>
+                           </table>
+                        </div>
+                    </div>
+    
+                    <div id="attendance" class="tab-pane">
+                        <h2>Attendance</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-12-20</td>
+                                    <td>Present</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-21</td>
+                                    <td>Absent</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-22</td>
+                                    <td>Present</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-pane");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tab-link");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+                    
+                    <script src="script.js"></script>
+                    
+                    <!-- Sources for icons -->
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    
+                    </body>
+                    </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+       
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="logo">
+                <img src="Preview-removebg-preview.png" alt="Your Brand Logo"> 
+            </div>
+            <h2>Signup/Login</h2>
+            <div class="form-container">
+                <div class="user-role">
+                    <label for="student">
+                        <input type="radio" id="student" name="role" value="student" checked>
+                        Student
+                    </label>
+                    <label for="teacher">
+                        <input type="radio" id="teacher" name="role" value="teacher">
+                        Teacher
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="username">Email/Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your email or username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <div class="social-login">
+                    <button class="social-btn google"> Login with Google</button> 
+                </div>
+                <button class="btn" id="login-btn">Login   <a href="dashboard.html"></a></button>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

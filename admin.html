@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>OCM Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList active">
+                    <a href="dashboard.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="links">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="student.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                                    <span class="links">Student/Teacher</span>
+                                                    </a>
+                </li>
+                <li class="navList">
+                    <a href="class.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Class</span>
+                    </a>
+                </li>
+            
+                <li class="navList">
+                    <a href="Assignment.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Assignment Submission</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="liveclass.html">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span class="links">Live Class</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li class="navList">
+                    <a href="index.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span class="links">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            
+            
+                <ul>
+                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> User Management</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            
+        </aside>
+
+        <main>
+            <div class="main-content">
+                <h1>Admin Dashboard</h1>
+
+                <div class="overview">
+                    <div class="overview-item">
+                        <h2>Total Users</h2>
+                        <p>1200</p>
+                    </div>
+                    <div class="overview-item">
+                        <h2>Active Users</h2>
+                        <p>800</p>
+                    </div>
+                    <div class="overview-item">
+                        <p>Total Courses</p>
+                        <p>50</p>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    <h2>Platform Usage</h2>
+                    <canvas id="userGrowthChart"></canvas> 
+                </div>
+
+                <div class="reports">
+                    <h2>Reports</h2>
+                    <div class="report-card">
+                        <h3>Class Completion Rates</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Completion Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td>85%</td>
+                                </tr>
+                                <tr>
+                                    <td>Science</td>
+                                    <td>78%</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>92%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sample Chart.js data
+        const userGrowthData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'User Growth',
+                data: [100, 120, 150, 180, 200, 220],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const ctx = document.getElementById('userGrowthChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: userGrowthData,
+            options: {}
+        });
+    </script>
+
+    <!-- Sources for icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

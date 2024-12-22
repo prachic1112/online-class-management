@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6f2ff;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #1891d1;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+nav .logo img {
+    width: auto;
+    height: 60px;
+    object-fit: cover;
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+nav .menu-items {
+    margin-top: 40px;
+}
+
+nav .menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu-items li {
+    margin-bottom: 20px;
+}
+
+nav .menu-items a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-items ion-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+nav .menu-items .links {
+    font-size: 18px;
+}
+
+nav .bottom-link {
+    margin-top: auto;
+}
+
+/* Dashboard */
+.dashboard {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background-color: #e6f2ff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Teacher Dashboard */
+.teacher-dashboard {
+  
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.teacher-dashboard h3 {
+    margin-bottom: 10px;
+}
+
+.teacher-dashboard .overview {
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+}
+
+.teacher-dashboard .quick-links {
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard .notifications {
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard .widgets {
+    margin-bottom: 20px;
+}
+
+/* Student Dashboard */
+.student-dashboard {
+    
+    padding: 20px;
+}
+
+.student-dashboard h3 {
+    margin-bottom: 10px;
+}
+
+.student-dashboard .overview {
+    margin-bottom: 20px;
+}
+
+.student-dashboard .enrolled-courses {
+    margin-bottom: 20px;
+}
+
+.student-dashboard .announcements {
+    margin-bottom: 20px;
+}
+
+.student-dashboard .widgets {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .dashboard {
+        left: 0;
+        width: 100%;
+    }
+
+    .teacher-dashboard {
+        width: 100%;
+        border-right: none;
+    }
+
+    .student-dashboard {
+        width: 100%;
+    }
+}
